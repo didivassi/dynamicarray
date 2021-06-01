@@ -9,8 +9,6 @@ public class Main {
 
         DynamicArray dinamyc=new DynamicArray();
 
-
-
         dinamyc.push("one");
         dinamyc.push("two");
         dinamyc.push("three");
