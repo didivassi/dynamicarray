@@ -9,6 +9,7 @@ public class Main {
 
         DynamicArray dinamyc=new DynamicArray();
 
+        System.out.println(dinamyc.length());
         dinamyc.push("one");
         dinamyc.push("two");
         dinamyc.push("three");
@@ -32,5 +33,6 @@ public class Main {
         System.out.println("test pop");
         dinamyc.pop();
         dinamyc.list();
+        System.out.println(dinamyc.length());
     }
 }
