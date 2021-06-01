@@ -65,6 +65,9 @@ public class DynamicArray {
     }
 
 
+    public int length(){
+        return arrayObjects.length;
+    }
     public void list(){
         for (Object object:arrayObjects) {
             System.out.println(object);
