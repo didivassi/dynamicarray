@@ -10,7 +10,9 @@ public class DynamicArray {
 
     public void push(Object object){
         add(object,arrayObjects.length);
-       /* int  newLength=arrayObjects.length+1;
+       /*
+       Old add method
+       int  newLength=arrayObjects.length+1;
         Object[] tempArray=new Object[newLength];
         for (int i = 0; i <arrayObjects.length ; i++) {
             tempArray[i]=arrayObjects[i];
@@ -37,14 +39,12 @@ public class DynamicArray {
         Object[] tempArray=new Object[newLength];
 
         for (int i = 0; i <arrayPosition ; i++) {
-            //System.out.println(arrayObjects[i]);
+
             tempArray[i]=arrayObjects[i];
         }
 
         tempArray[arrayPosition]=object;
         for (int i = arrayPosition+1; i <newLength; i++) {
-            //7System.out.println(i);
-            //System.out.println(arrayObjects[i]);
             tempArray[i]=arrayObjects[i-1];
         }
         arrayObjects=tempArray;
@@ -55,13 +55,10 @@ public class DynamicArray {
         Object[] tempArray=new Object[newLength];
 
         for (int i = 0; i <arrayPosition ; i++) {
-            //System.out.println(arrayObjects[i]);
             tempArray[i]=arrayObjects[i];
         }
 
         for (int i = arrayPosition+1; i <arrayObjects.length ; i++) {
-            //7System.out.println(i);
-            //System.out.println(arrayObjects[i]);
             tempArray[i-1]=arrayObjects[i];
         }
         arrayObjects=tempArray;
