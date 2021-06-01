@@ -9,17 +9,27 @@ public class Main {
 
         DynamicArray dinamyc=new DynamicArray();
 
-        String teste = "lalalal";
-        int teste2=2;
 
-        dinamyc.add("inicio");
-        dinamyc.add("meio");
-        dinamyc.add("meioooo");
-        dinamyc.add("meioooo0000");
-        dinamyc.add("fim");
 
+        dinamyc.push("one");
+        dinamyc.push("two");
+        dinamyc.push("three");
+        dinamyc.push("four");
+        dinamyc.push("five");
+        dinamyc.push(6);
+        dinamyc.push(7);
+        dinamyc.list();
+        System.out.println("removing from position 1");
         dinamyc.remove(1);
-
+        dinamyc.list();
+        System.out.println("adding on position 1");
+        dinamyc.add("new two",1);
+        dinamyc.list();
+        System.out.println("shifting");
+        dinamyc.shift();
+        dinamyc.list();
+        System.out.println("unshifting");
+        dinamyc.unshift("new one");
         dinamyc.list();
         System.out.println("test pop");
         dinamyc.pop();
