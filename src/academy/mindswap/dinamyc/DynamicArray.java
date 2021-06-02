@@ -1,6 +1,6 @@
 package academy.mindswap.dinamyc;
 
-public class DynamicArray {
+public class DynamicArray<T> {
 
     private Object[] arrayObjects;
 
@@ -8,7 +8,7 @@ public class DynamicArray {
         arrayObjects=new Object[0];
     }
 
-    public void push(Object object){
+    public void push(T object){
         add(object,arrayObjects.length);
        /*
        Old add method
@@ -30,11 +30,12 @@ public class DynamicArray {
         remove(0);
     }
 
-    public void  unshift(Object object){
+    public void unshift(T object){
         add(object,0);
     }
 
-    public void add(Object object,  int arrayPosition){
+    public void add(T object,  int arrayPosition) {
+
         int  newLength=arrayObjects.length+1;
         Object[] tempArray=new Object[newLength];
 
@@ -42,7 +43,6 @@ public class DynamicArray {
 
             tempArray[i]=arrayObjects[i];
         }
-
         tempArray[arrayPosition]=object;
         for (int i = arrayPosition+1; i <newLength; i++) {
             tempArray[i]=arrayObjects[i-1];
@@ -50,7 +50,8 @@ public class DynamicArray {
         arrayObjects=tempArray;
     }
 
-    public void remove(int arrayPosition){
+    public void remove(int arrayPosition) {
+
         int  newLength=arrayObjects.length-1;
         Object[] tempArray=new Object[newLength];
 
@@ -64,9 +65,18 @@ public class DynamicArray {
         arrayObjects=tempArray;
     }
 
-
     public int length(){
         return arrayObjects.length;
+    }
+
+    private boolean existingIndex(int index) throws ArrayIndexOutOfBoundsException{
+        System.out.println(index>arrayObjects.length-1);
+        if(index>arrayObjects.length-1){
+            //System.out.println("non existing index");
+            throw new ArrayIndexOutOfBoundsException();
+           // return false;
+        }
+        return true;
     }
     public void list(){
         for (Object object:arrayObjects) {

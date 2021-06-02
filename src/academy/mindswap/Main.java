@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        DynamicArray dinamyc=new DynamicArray();
+        DynamicArray<String> dinamyc=new DynamicArray();
 
         System.out.println(dinamyc.length());
         dinamyc.push("one");
@@ -15,8 +15,8 @@ public class Main {
         dinamyc.push("three");
         dinamyc.push("four");
         dinamyc.push("five");
-        dinamyc.push(6);
-        dinamyc.push(7);
+      //  dinamyc.push(6);
+      //  dinamyc.push(7);
         dinamyc.list();
         System.out.println("removing from position 1");
         dinamyc.remove(1);
@@ -34,5 +34,8 @@ public class Main {
         dinamyc.pop();
         dinamyc.list();
         System.out.println(dinamyc.length());
+
+        //trows error
+        //dinamyc.add("new two",9);
     }
 }
